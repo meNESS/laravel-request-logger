@@ -21,9 +21,10 @@ return [
     */
     'logger' => [
         'enabled'   => true,
-        'handlers'  => ['Prettus\RequestLogger\Handler\HttpLoggerHandler'],
+        'handlers'  => [Prettus\RequestLogger\Handler\HttpLoggerHandler::class],
         'file'      => storage_path("logs/http.log"),
         'level'     => 'info',
-        'format'    => 'common'
+        'format'    => 'common',
+        'exclude'=>[]
     ]
 ];
